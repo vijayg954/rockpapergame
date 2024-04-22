@@ -3,10 +3,12 @@
   padding: 0;
 }
 body {
+  width: 100%;
+  height: 100%;
   background-color: #1a2c42;
   text-align: center;
-  font-family: cursive;
- 
+  font-style: normal;
+
   overflow: hidden;
 }
 h1 {
@@ -16,8 +18,8 @@ h1 {
   line-height: 5rem;
 }
 .choices .choice {
-  height: 9rem;
-  width: 9rem;
+  height: 7rem;
+  width: 7rem;
   margin: 10px;
   border-radius: 50%;
   display: flex;
@@ -25,27 +27,30 @@ h1 {
   align-items: center;
 }
 .choice img {
-  height: 8rem;
-  width: 8rem;
+  height: 6rem;
+  width: 6rem;
   object-fit: inherit;
   margin: 5px;
+  object-fit: fill;
   border-radius: 50%;
   border: 5px solid green;
 }
 
 .choices {
+  position: relative;
   height: 100%;
-  width: 100%;
+  width: 90%;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 7rem;
+  gap: 2rem;
   margin-top: 3rem;
 }
-.choice:hover{
-    opacity: .8;
-    cursor: pointer;
-    background-color: rgb(159, 198, 220);
+.choice:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  background-color: rgb(159, 198, 220);
 }
 .score_board {
   width: 100%;
@@ -58,32 +63,66 @@ h1 {
   font-size: 1.2rem;
   font-weight: bolder;
   color: rgb(18, 49, 140);
-  margin: 30px;
-
+  margin: auto;
 }
 .score {
   background-color: rgb(180, 231, 130);
-  width: 31%;
+  width: 38%;
   border-radius: 27px;
   height: 24%;
-  
-  
+}
+#heart {
+  width: 90px;
+  height: 90px;
+  margin: auto;
+  margin-top: 4rem;
+ 
+  display: flex;
+  justify-content: center;
+  /* text-align: center; */
+  align-items: center;
+}
+#hearts {
+  width: 90px;
+  height: 80px;
+  border: 2px solid cyan;
+  border-radius: 50%;
+  background-color: #fff;
+  /* object-fit: cover; */
+  display: none;
 }
 .msg_container {
   /* background-color: rgb(4, 41, 23); */
   color: white;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 5rem;
-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  width: 100%;
+  margin-top: 3rem;
 
 }
-#Message{
-  width:30%;
+#Message {
+  width: 35%;
   padding: .8rem;
   background-color: green;
   border-radius: 27px;
-
+  font-size: 1rem;
+  font-weight: 900;
+  font-style: normal;
 }
 
+@media (max-width: 550px) {
+  .choices {
+    position: relative;
+    width: 80%;
+  }
+  .choice img {
+    height: 5rem;
+    width: 5rem;
+    object-fit: inherit;
+    margin: 5px;
+    object-fit: fill;
+    border-radius: 50%;
+  }
+}

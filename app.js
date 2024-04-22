@@ -2,6 +2,7 @@ let userscore = 0;
 let computerscore = 0;
 const choices = document.querySelectorAll(".choice");
 const msg1 = document.querySelector("#Message")
+const msg2 = document.querySelector("#hearts")
 const userscore1=document.querySelector("#userscore")
 const compscore1=document.querySelector("#computerscore")
 
@@ -13,7 +14,8 @@ const showingwinner = (userwin) => {
     // console.log("youwin");
    userscore++;
    userscore1.innerText=userscore
-    msg1.innerText=` congratulations \n You win`
+    msg1.innerText=` congratulations \n You win `
+    msg2.style.display="block"
     msg1.style.backgroundColor="green"
 } else {
     computerscore++;
@@ -21,6 +23,7 @@ const showingwinner = (userwin) => {
     // console.log("you loss");
     msg1.innerText="You lost";
     msg1.style.backgroundColor="red"
+    msg2.style.display="none"
     
 }
 };
@@ -34,6 +37,7 @@ const draw = () => {
     msg1.innerText="draw game";
     msg1.style.backgroundColor="blue"
   console.log("Game Draw");
+  msg2.style.display="none"
 };
 
 const playgame = (userchoice) => {
